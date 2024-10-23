@@ -9,43 +9,7 @@
 
 <body>
 
-  <script>
-    var videoIDs = [
-      "w3LjpFhySTg",
-      "73k27SEQVTU",
-      "tEtg5Kg3voQ",
-      "zM2d_2k9Nj0",
-      "dMr-Jt_K3Cc",
-      "IEikux7_3HA",
-      "d8hFWghj84k",
-      "B4-L2nfGcuE"
-    ];
-
-    var lastIndex = -1;
-
-    var interval = 900000;
-
-    function changeVideo() {
-      var iframe = document.getElementById('feed');
-      var newIndex;
-
-      // ensure the new video is not the same as the last one
-      do {
-        newIndex = Math.floor(Math.random() * videoIDs.length);
-      } while (newIndex === lastIndex);
-
-      var videoID = videoIDs[newIndex];
-      iframe.src = "https://www.youtube.com/embed/" + videoID + "?autoplay=1&mute=1";
-
-      lastIndex = newIndex;
-    }
-
-    var currentIndex = 0;
-    setInterval(changeVideo, interval); // 900000 ms = 15 minutes
-
-    window.onload = function() {
-      changeVideo();
-    };
+  <script src="script.js" type="text/javascript">
   </script>
 
   <iframe id="feed" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" src="https://www.youtube.com/embed/w3LjpFhySTg?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
