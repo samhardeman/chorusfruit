@@ -23,6 +23,8 @@
 
     var lastIndex = -1;
 
+    var interval = 900000;
+
     function changeVideo() {
       var iframe = document.getElementById('feed');
       var newIndex;
@@ -39,7 +41,7 @@
     }
 
     var currentIndex = 0;
-    setInterval(changeVideo, 300000); // 300000 ms = 5 minutes
+    setInterval(changeVideo, interval); // 900000 ms = 15 minutes
 
     window.onload = function() {
       changeVideo();
