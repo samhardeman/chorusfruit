@@ -28,6 +28,7 @@ function changeVideo() {
   lastIndex = newIndex;
 }
 
+// thank you andrew moore https://stackoverflow.com/questions/1217929/how-to-automatically-reload-a-web-page-at-a-certain-time
 function refreshAt(hours, minutes, seconds) {
   var now = new Date();
   var then = new Date();
